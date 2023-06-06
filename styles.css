@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    margin: 0;
+}
+
+:root{
+    /* ### Primary */
+  
+  --red: hsl(0, 100%, 67%);
+  --orange: hsl(39, 100%, 56%);
+  --green: hsl(166, 100%, 37%);
+  --blue: hsl(234, 85%, 45%);
+  
+  /* ## Gradients */
+  
+  --bg_blue_violet: hsl(252, 100%, 67%);
+  --bg_blue: hsl(241, 81%, 54%);
+  
+  --violet-circle: hsla(256, 72%, 46%, 1);
+  --blue-circle: hsla(241, 72%, 46%, 0);
+  
+  
+  
+  /* ### Neutral */
+  
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-blue: hsl(224, 30%, 27%);
+  }
+
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:18px;
+}
+.container_general{
+    display: flex;
+    width: 40%;
+    min-width: 550px;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.325);
+}
+.container_inside{
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 20px;
+}
+.circle_inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+      );
+    border-radius: 100px;
+    width: 80%;
+    height: 200px;
+}
+.title{
+    color: rgba(255, 255, 255, 0.641);
+
+}
+.subtitle{
+color: white;
+}
+.text_score{
+   color: rgba(255, 255, 255, 0.753);
+   font-weight: 500;
+}
+.score{
+    font-size: 3.5em;
+    color: rgba(255, 255, 255, 0.988);
+
+}
+.score_2{
+    color: rgba(255, 255, 255, 0.432);
+    font-size: .9em;
+}
+.reaction{
+    background-color: hsla(0, 100%, 67%, 0.163);
+}
+.memory{
+ 
+    background-color: hsla(39, 100%, 56%, 0.163); 
+}
+.verbal{
+    background-color: rgba(17, 255, 0, 0.089);
+}
+.visual{
+    background-color: rgba(0, 89, 255, 0.089);
+}
+.target_2{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 50%;
+}
+.title_2{
+    text-align: left;
+    margin-bottom: 30px;
+    color: hsl(224, 30%, 27%);  
+}
+.reaction, .memory, .verbal, .visual{
+    border-radius: 10px ;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 800;
+}
+.reaction_img, .visual_img, .memory_img, .verbal_img {
+margin-right: 10px;
+}
+.items{
+    font-size: 1.1rem;
+}
+.red{
+    color: var(--red);
+}
+.yellow{
+    color: var(--orange);
+}
+.green{
+    color: hsl(166, 100%, 37%);
+}
+.blue{
+    color: hsl(234, 85%, 45%); 
+}
+.continue{
+    background-color: hsl(224, 30%, 27%);
+    padding: 15px;
+    text-align: center;
+    border-radius: 100px;
+    margin-top: 30px;  
+}
+.continue:hover{
+      cursor: pointer;
+      background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.continue2{
+    text-decoration: none;
+    color: white;
+}
+.items_1, .items_2, .items_3, .items_4{
+position: absolute;
+right: 20px;
+color: hsl(224, 30%, 27%);
+font-weight: 800;
+}
+.percent{
+    color:  hsla(224, 30%, 27%, 0.616) ;
+}
+
+@media (max-width: 480px){
+
+    .body{
+        height: 100%;
+    }
+    .container_general{
+        width: 90%;
+        min-width: 300px;
+        margin-top: 100px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    .container_inside * {
+        transform: scale(.9);
+    }
+    .circle_inside{
+        display: flex;
+        width: 200px;
+    }
+    .container_inside{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+    }
+    .target_2{
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        margin-top: 0;
+    }
+}
